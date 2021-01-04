@@ -1,0 +1,1 @@
+sudo docker build --network=host -t byamao1/cuckoo:1.0 .
