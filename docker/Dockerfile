@@ -10,7 +10,7 @@ RUN echo "nameserver 223.5.5.5" >> /etc/resolv.conf && \
 # Modify cpu config
 COPY CuckooSandbox-Windows8.1.xml /etc/libvirt/qemu  
 COPY reporting.conf /cuckoo/conf
-# Add dsn; Modify ip for internet
+# Add dsn; Modify ips for visiting internet
 COPY kvm.conf /cuckoo/conf
 
 RUN apt-get install -y swig
