@@ -18,11 +18,9 @@ then
     service libvirtd start
     virsh net-start default  
 
-    nohup cuckoo web runserver 0.0.0.0:8080&
-    nohup cuckoo api --host 0.0.0.0 --port 8090&
+    nohup cuckoo web runserver 0.0.0.0:8080 >web.out 2>&1 &
+    nohup cuckoo api --host 0.0.0.0 --port 8090 >api.out 2>&1 &
     cuckoo -d
-    #nohup cuckoo --cwd /cuckoo web  runserver 0.0.0.0:8080&
-    #cuckoo --cwd /cuckoo -d
 
     return 0
 fi

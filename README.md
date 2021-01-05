@@ -11,7 +11,7 @@ Change items as following:
 # Architecture
 ```
 .
-│  docker.sh    Run docker
+│  run.sh    Run docker
 │
 └─docker
     │  build.sh                     Make docker image
@@ -28,7 +28,7 @@ Change items as following:
     └─snapshot      Snapshot configurations of qemu virtual machine
         
 ```
-- `docker.sh` is the script for running docker
+- `run.sh` is the script for running docker
 - Directory `docker` contains files for making docker image
 
 **Note**

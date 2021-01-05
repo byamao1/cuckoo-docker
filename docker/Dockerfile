@@ -24,6 +24,12 @@ COPY community-master.tar.gz /data
 RUN cuckoo --cwd /cuckoo community --file /data/community-master.tar.gz
 RUN mv /cuckoo /root/.cuckoo
 COPY snapshot /var/lib/libvirt/qemu/snapshot/
+
+EXPOSE 5900
+EXPOSE 8080
+EXPOSE 8090
+VOLUME /vms
+
 COPY main.sh /
 
 ENTRYPOINT ["/main.sh"]
