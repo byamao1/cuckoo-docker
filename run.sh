@@ -23,10 +23,18 @@ else
     echo "Already run mongo: ${mongo_proc}"
 fi
 
+# Stop cuckoo
+for i in $(sudo docker ps |grep "cuckoo"|awk '{print $1}')
+do
+  sudo docker stop $i
+  sudo docker rm $i
+  echo "Stop cuckoo container：${i}"
+done
+
 # Cuckoo
 sudo docker run -itd --privileged \
     -p 8080:8080 -p 8090:8090 -p 5900:5900 \
-    -v /root/images:/vms \
+    -v /root/work/docker-cuckoo/vms:/vms \
     byamao1/cuckoo:latest web
 
 if [ $? -eq 0 ]; then
