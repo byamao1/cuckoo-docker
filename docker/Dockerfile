@@ -25,13 +25,16 @@ RUN cuckoo --cwd /cuckoo community --file /data/community-master.tar.gz
 RUN mv /cuckoo /root/.cuckoo
 COPY snapshot /var/lib/libvirt/qemu/snapshot/
 
+
 EXPOSE 5900
 EXPOSE 8080
 EXPOSE 8090
 VOLUME /vms
 
+
 COPY main.sh /
-RUN chmod 777 /main.sh
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    chmod 777 /main.sh
 
 ENTRYPOINT ["/main.sh"]
 CMD ["default"]
