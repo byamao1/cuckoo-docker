@@ -65,10 +65,11 @@ You can download *.7z at path (I use `/root/images`), then unzip them.
 ```
 ./run.sh
 ```
-In `run.sh`, You can use other path as image path:  
+In `run.sh`, You can use other host path as image path:  
 ```
+# Cuckoo
 sudo docker run -itd --privileged \
--p 8080:8080 -p 5900:5900 \
--v /root/images:/vms \  # You can replace /root/images with other path
-byamao1/cuckoo:1.0 web
+    -p 8080:8080 -p 8090:8090 -p 5900:5900 \
+    -v /root/images:/vms \  # You can replace /root/images with other path
+    byamao1/cuckoo:1.0 web
 ```
