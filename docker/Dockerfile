@@ -31,6 +31,7 @@ EXPOSE 8090
 VOLUME /vms
 
 COPY main.sh /
+RUN chmod 777 /main.sh
 
 ENTRYPOINT ["/main.sh"]
 CMD ["default"]
