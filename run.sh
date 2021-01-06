@@ -27,7 +27,7 @@ fi
 sudo docker run -itd --privileged \
     -p 8080:8080 -p 8090:8090 -p 5900:5900 \
     -v /root/images:/vms \
-    byamao1/cuckoo:1.0 web
+    byamao1/cuckoo:latest web
 
 if [ $? -eq 0 ]; then
     echo "Run container cuckoo successfully."
