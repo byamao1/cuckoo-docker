@@ -54,7 +54,7 @@ I had uploaded the windows images to Baidu pan:
 > [win7,win8.1](https://pan.baidu.com/s/1nc7paKWhCsaPEK-5rY_J1Q)  
 Extraction code: ded8 
 
-You can download *.7z at path (I use `/root/images`), then unzip them.
+You can download *.7z at path (I use `/root/work/docker-cuckoo/vms`), then unzip them.
 > Original image site: https://msdn.itellyou.cn/  
 [win7]  
 >ed2k://|file|en_windows_7_enterprise_x64_dvd_X15-70749.iso|3121215488|CB90BE6D74E6E661F8663BD7E17AD2FF|/  
