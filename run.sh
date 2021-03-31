@@ -34,7 +34,7 @@ done
 # Cuckoo
 sudo docker run -itd --privileged \
     -p 8080:8080 -p 8090:8090 -p 5900:5900 \
-    -v /root/work/docker-cuckoo/vms:/vms \
+    -v /root/work/cuckoo-docker/vms:/vms \
     byamao1/cuckoo:latest web
 
 if [ $? -eq 0 ]; then
