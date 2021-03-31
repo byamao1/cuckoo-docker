@@ -70,6 +70,6 @@ In `run.sh`, You can use other host path as image path:
 # Cuckoo
 sudo docker run -itd --privileged \
     -p 8080:8080 -p 8090:8090 -p 5900:5900 \
-    -v /root/work/docker-cuckoo/vms:/vms \  # You can replace /root/work/docker-cuckoo/vms with other path
+    -v /root/work/cuckoo-docker/vms:/vms \  # You can replace /root/work/cuckoo-docker/vms with other path
     byamao1/cuckoo:1.0 web
 ```
